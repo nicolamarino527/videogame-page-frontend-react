@@ -6,16 +6,18 @@ import './App.css';
 
 import HomePage from './pages/HomePage';
 import Navbar from './components/NavBar';
+import Defaultlayout from './layout/DefaultLayout';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Navbar />
         <Routes >
-          <Route path="/" element={<HomePage />} />
-          {/* <Route path="/videogames" element={<GamesPage />} /> */}
+          <Route element={<Defaultlayout />}>
+            <Route path="/" element={<HomePage />} />
+            {/* <Route path="/videogames" element={<GamesPage />} /> */}
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
