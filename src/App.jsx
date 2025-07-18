@@ -6,6 +6,7 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import Defaultlayout from './layout/DefaultLayout';
 import GamesPage from './pages/GamesPage';
+import GameDetailPage from './pages/GameDetailPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route element={<Defaultlayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/videogames" element={<GamesPage />} />
+            <Route path="/videogames/:id" element={<GameDetailPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
