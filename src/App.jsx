@@ -1,27 +1,25 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { GlobalProvider } from './context/GlobalContext';
 
 import './App.css';
 
-
 import HomePage from './pages/HomePage';
-import Navbar from './components/NavBar';
 import Defaultlayout from './layout/DefaultLayout';
+import GamesPage from './pages/GamesPage';
 
 function App() {
-
   return (
-    <>
+    <GlobalProvider>
       <BrowserRouter>
-        <Routes >
+        <Routes>
           <Route element={<Defaultlayout />}>
             <Route path="/" element={<HomePage />} />
-            {/* <Route path="/videogames" element={<GamesPage />} /> */}
+            <Route path="/videogames" element={<GamesPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
-  )
+    </GlobalProvider>
+  );
 }
 
-export default App
+export default App;
