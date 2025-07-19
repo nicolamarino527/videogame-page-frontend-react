@@ -38,8 +38,8 @@ const GameDetailPage = () => {
                         className="mb-3"
                     />
                 )}
-                <p><strong>Description:</strong> {game.description}</p>
-                <p><strong>Release:</strong> {game.releaseDate}</p>
+                <p><strong>Description:</strong> {game.description ?? "Unknown"}</p>
+                <p><strong>Release:</strong> {game.releaseDate ?? "Unknown"}</p>
                 <p><strong>Genre:</strong> {game.genres?.map(g => g.name).join(", ")}</p>
                 <p><strong>Platforms:</strong> {game.platforms?.map(p => p.name).join(", ")}</p>
             </div>
@@ -52,7 +52,7 @@ const GameDetailPage = () => {
                             <p>{discussion.content}</p>
                             <small>{new Date(discussion.date).toLocaleString()}</small>
                             <br />
-                            <small><strong>User:</strong> {discussion.user?.username || "Anonymous"}</small>
+                            <small><strong>User:</strong> {discussion.user?.userName || "Anonymous"}</small>
                         </div>
                     ))
                 ) : (

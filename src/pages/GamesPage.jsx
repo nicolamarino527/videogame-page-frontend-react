@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import GameCard from "../components/GameCard";
-import { globalContext } from "../context/globalContext";
+import { globalContext } from "../context/GlobalContext";
 
 const GamesPage = () => {
     const [games, setGames] = useState([]);

@@ -15,7 +15,7 @@ export default function HomePage() {
                         src={skgImage}
                         className="card-img-top"
                         alt="..."
-                        style={{ height: '400px', objectFit: 'cover' }}
+                        style={{ height: '530px', objectFit: 'cover' }}
                     />
                     <div className="card-body">
                         <h5 className="card-title">Stop Killing Games</h5>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function GameCard({ game }) {
     return (
-        <Link to={`/videogames/${game.id}`} style={{ textDecoration: "none" }}>
+        <Link to={`/videogames/${game.id}`} style={{ textDecoration: "none", maxHeight: '650px', overflow: 'hidden' }}>
             <div className="card mb-5 bg-dark text-white">
                 <img
                     src={game.coverImage}
@@ -13,8 +13,8 @@ export default function GameCard({ game }) {
                 />
                 <div className="card-body">
                     <h5 className="card-title">{game.title}</h5>
-                    <p className="card-text">{game.description}</p>
-                    <p className="card-text">{game.releaseDate}</p>
+                    <p><strong>Description:</strong> {game.description ?? "Unknown"}</p>
+                    <p><strong>Release:</strong> {game.releaseDate ?? "Unknown"}</p>
                 </div>
                 <div>
 
